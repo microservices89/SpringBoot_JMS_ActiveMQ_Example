@@ -1,0 +1,18 @@
+open http://localhost:8161/ 
+login: admin    
+password: admin
+
+
+sender> mvn package
+sender> java -jar target\sender-0.0.1-SNAPSHOT.jar
+
+This will send 10 message to ActiveMQ. Check it on the following website
+
+open http://localhost:8161/ 
+login: admin    
+password: admin
+
+Receiver> mvn package
+Receiver> java -jar target\SpringBootDemo-0.0.1-SNAPSHOT.jar
+
+The receiver service will receive the messages.
